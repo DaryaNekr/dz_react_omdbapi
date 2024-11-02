@@ -5,17 +5,31 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --primary-color: #4338CA;
+  --secondary-color: #F59E0B;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #e5e5e5;
+    --foreground: #3d3b3b;
+    --primary-color: #2a93ad;
+    --secondary-color: #FACC15;
   }
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Inter', sans-serif;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+a {
+  color: var(--primary-color);
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--secondary-color);
 }
